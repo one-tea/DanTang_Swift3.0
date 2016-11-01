@@ -8,7 +8,11 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController,UIScrollViewDelegate {
+class CategoryViewController: UIViewController,UIScrollViewDelegate,CategoryButtonDelegate {
+	internal func push(_ button: UIButton) {
+		
+	}
+
 
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView.init(frame: self.view.bounds)
@@ -43,19 +47,23 @@ class CategoryViewController: UIViewController,UIScrollViewDelegate {
     }
 
     func setUI(){
-        
-        let topVC = CategoryTopViewController()
-        self.addChildViewController(topVC)//先加入子控制器中一部分 在加载view
-        let topView = UIView.init(frame: CGRect(x: 0, y: 0, width: SCREEN_W, height: 135))
-            topView.addSubview(childViewControllers[0].view)
-        
-        
-        
-        
-        
-        
+		
+		self.view.addSubview(scrollView)
+		
+		let topVC = CategoryTopViewController()
+		self.addChildViewController(topVC)//先加入子控制器中一部分,可以点击事件 在加载view
+		let topView = UIView.init(frame: CGRect(x: 0, y: 0, width: SCREEN_W, height: 135))
+		topView.addSubview(childViewControllers[0].view)
+		scrollView.addSubview(topVC.view)
+		
+		let  midView = CategoryMidView(frame: CGRect(x: 0, y: 150, width: SCREEN_W, height: 100))
+		midView.delegate = self
+		scrollView.addSubview(midView)
+		
+		
+		
     }
-        
+	
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

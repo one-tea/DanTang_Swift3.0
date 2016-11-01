@@ -81,7 +81,7 @@ class FoodViewViewController: UIViewController,UITableViewDelegate, UITableViewD
             
             let model = dataArry[indexPath.row]
             
-            cell.headImage.setImageWith(URL.init( string: model.coverImageUrl)!)
+            cell.headImage.sd_setImage(with: URL.init( string: model.coverImageUrl)!)
             cell.titleL.text = model.title
             cell.likeBtn.setTitle(String(model.likesCount), for: UIControlState())
             cell.selectionStyle = .none

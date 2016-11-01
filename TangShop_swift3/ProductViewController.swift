@@ -34,7 +34,7 @@ class ProductViewController: UIViewController,UICollectionViewDelegate,UICollect
             if (error == nil) {
                 
                 let obj = JSON.init(data: data!, options: JSONSerialization.ReadingOptions.init(rawValue: 7))
-                print("obj:\(obj)")
+//                print("obj:\(obj)")
 
                 for item in obj["data"]["items"].arrayValue{
                     
@@ -42,9 +42,9 @@ class ProductViewController: UIViewController,UICollectionViewDelegate,UICollect
                     let model = ProductMoel.init(jsonFrom: itemModel)
                     self.dataArr.append(model)
                 }
-                print((self.dataArr.first as! ProductMoel!).price)
+//                print((self.dataArr.first as! ProductMoel!).price)
 
-                print("product:\(self.dataArr)")
+//                print("product:\(self.dataArr)")
                 DispatchQueue.main.async(execute: { 
                     print((self.dataArr.first as! ProductMoel!).price)
                     

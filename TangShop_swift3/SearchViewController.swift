@@ -79,11 +79,11 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
                     "limit": "20",
                     "offset": "0",
                     "sort": ""];
-        print("\(url)&\(para)")
-        
+//        print("\(url)&\(para)")
+		
         self.manager.get(url, parameters: para, progress: nil, success: { (task, res ) in
             let obj = JSON.init(data: res as! Data, options: JSONSerialization.ReadingOptions.mutableContainers)
-            print("search:\(obj)")
+//            print("search:\(obj)")
             let modelArray = obj["data"]["items"].arrayValue
             for item in modelArray {
                 let model = HomeSearchModel.init(fromJson: item)
