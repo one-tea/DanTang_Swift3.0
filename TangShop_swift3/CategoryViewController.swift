@@ -8,10 +8,8 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController,UIScrollViewDelegate,CategoryButtonDelegate {
-	internal func push(_ button: UIButton) {
-		
-	}
+class CategoryViewController: UIViewController,UIScrollViewDelegate,CategoryButtonDelegate,CategoryBotttomDelegate {
+
 
 
     lazy var scrollView: UIScrollView = {
@@ -53,6 +51,7 @@ class CategoryViewController: UIViewController,UIScrollViewDelegate,CategoryButt
 		let topVC = CategoryTopViewController()
 		self.addChildViewController(topVC)//先加入子控制器中一部分,可以点击事件 在加载view
 		let topView = UIView.init(frame: CGRect(x: 0, y: 0, width: SCREEN_W, height: 135))
+		topView.backgroundColor = UIColor.white
 		topView.addSubview(childViewControllers[0].view)
 		scrollView.addSubview(topVC.view)
 		
@@ -60,10 +59,35 @@ class CategoryViewController: UIViewController,UIScrollViewDelegate,CategoryButt
 		midView.delegate = self
 		scrollView.addSubview(midView)
 		
+		let  bottomView = CategoryBottomView()
+		bottomView.frame =  CGRect(x: 0, y: (midView.mj_y + midView.midVieHieght() + 16), width:SCREEN_W, height: SCREEN_H)
+		bottomView.delegate = self
+		
+		scrollView.contentSize = CGSize(width: SCREEN_W, height:SCREEN_H + 64)
+		scrollView.showsVerticalScrollIndicator = false
+		scrollView.addSubview(bottomView)
 		
 		
     }
 	
+	// detegate
+	
+	internal func push(_ button: UIButton) {
+		let categoryBtnDetailVC = CategoryDetailViewController()
+		categoryBtnDetailVC.id = button.tag
+		categoryBtnDetailVC.navigationItem.title = button.titleLabel?.text
+		categoryBtnDetailVC.hidesBottomBarWhenPushed = true
+		self.navigationController?.pushViewController(categoryBtnDetailVC, animated: true)
+	}
+	
+	internal func pushM(_ button: UIButton) {
+		let categoryBtnDetailVC = CategoryDetailViewController()
+		categoryBtnDetailVC.id = button.tag
+		categoryBtnDetailVC.navigationItem.title = button.titleLabel?.text
+		categoryBtnDetailVC.hidesBottomBarWhenPushed = true
+		self.navigationController?.pushViewController(categoryBtnDetailVC, animated: true)
+
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

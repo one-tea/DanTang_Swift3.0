@@ -16,7 +16,7 @@ class CategoryTopViewController: UIViewController, UICollectionViewDelegate,UICo
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .horizontal
-        let collectionView = UICollectionView.init(frame:CGRect(x: 0, y: 40, width: SCREEN_W, height: 75), collectionViewLayout: layout)
+        let collectionView = UICollectionView.init(frame:CGRect(x: 0, y: 40, width: SCREEN_W, height: 85), collectionViewLayout: layout)
         collectionView.delegate=self
         collectionView.dataSource=self
         collectionView.showsVerticalScrollIndicator = false
@@ -75,8 +75,8 @@ class CategoryTopViewController: UIViewController, UICollectionViewDelegate,UICo
 	func setUI() -> Void {
 		
 		self.navigationController?.navigationBar.isTranslucent = false
-		let headerL = UILabel.init(frame: CGRect(x: 10, y: 0, width: SCREEN_W, height: 40))
-			headerL.text = "专题合集"
+		let headerL = UILabel.init(frame: CGRect(x:0, y: 0, width: SCREEN_W, height: 40))
+			headerL.text = " 专题合集"
 		headerL.backgroundColor = UIColor.white
 			headerL.font = UIFont.systemFont(ofSize: 17)
 		self.view.addSubview(headerL)

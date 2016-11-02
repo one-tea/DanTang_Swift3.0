@@ -108,9 +108,12 @@
 		0A3C6DD91DC89367005CBDCA /* CategoryMidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3C6DD81DC89367005CBDCA /* CategoryMidView.swift */; };
 		0A3C6DDB1DC89572005CBDCA /* CategoryBottomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3C6DDA1DC89572005CBDCA /* CategoryBottomModel.swift */; };
 		0A4831E81DC4E8450015DF3D /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4831E71DC4E8450015DF3D /* HomePageViewController.swift */; };
+		0A4EA3A21DC9902F001787A3 /* CategoryBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4EA3A11DC9902F001787A3 /* CategoryBottomView.swift */; };
+		0A4EA3A41DC9E5D9001787A3 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4EA3A31DC9E5D9001787A3 /* InfoTableViewController.swift */; };
+		0A4EA3A61DC9E9BB001787A3 /* CallMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4EA3A51DC9E9BB001787A3 /* CallMeViewController.swift */; };
+		0A4EA3A81DC9EADC001787A3 /* CopyrightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4EA3A71DC9EADC001787A3 /* CopyrightViewController.swift */; };
 		0A5274CC1DC87CAD00C4F6BA /* CategoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5274CB1DC87CAD00C4F6BA /* CategoryDetailViewController.swift */; };
 		0A5274CE1DC880CF00C4F6BA /* CategoryTopDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5274CD1DC880CF00C4F6BA /* CategoryTopDetailModel.swift */; };
-		0AE807411DB0E36300459C08 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE807401DB0E36300459C08 /* InfoTableViewController.swift */; };
 		0AE807431DB2694C00459C08 /* UIBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE807421DB2694C00459C08 /* UIBarExtension.swift */; };
 		0AE807481DB4A6CF00459C08 /* JingXuanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE807471DB4A6CF00459C08 /* JingXuanViewController.swift */; };
 		0AE8074A1DB4AC2A00459C08 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE807491DB4AC2A00459C08 /* Tools.swift */; };
@@ -258,9 +261,12 @@
 		0A3C6DD81DC89367005CBDCA /* CategoryMidView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryMidView.swift; sourceTree = "<group>"; };
 		0A3C6DDA1DC89572005CBDCA /* CategoryBottomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryBottomModel.swift; sourceTree = "<group>"; };
 		0A4831E71DC4E8450015DF3D /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		0A4EA3A11DC9902F001787A3 /* CategoryBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryBottomView.swift; sourceTree = "<group>"; };
+		0A4EA3A31DC9E5D9001787A3 /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
+		0A4EA3A51DC9E9BB001787A3 /* CallMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallMeViewController.swift; sourceTree = "<group>"; };
+		0A4EA3A71DC9EADC001787A3 /* CopyrightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyrightViewController.swift; sourceTree = "<group>"; };
 		0A5274CB1DC87CAD00C4F6BA /* CategoryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDetailViewController.swift; sourceTree = "<group>"; };
 		0A5274CD1DC880CF00C4F6BA /* CategoryTopDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTopDetailModel.swift; sourceTree = "<group>"; };
-		0AE807401DB0E36300459C08 /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 		0AE807421DB2694C00459C08 /* UIBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarExtension.swift; sourceTree = "<group>"; };
 		0AE807471DB4A6CF00459C08 /* JingXuanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JingXuanViewController.swift; path = "TopScrollView(顶部滑动视图)/JingXuanViewController.swift"; sourceTree = "<group>"; };
 		0AE807491DB4AC2A00459C08 /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
@@ -548,7 +554,9 @@
 		0A1396221DB0DCEF0077CAA9 /* Info（关于） */ = {
 			isa = PBXGroup;
 			children = (
-				0AE807401DB0E36300459C08 /* InfoTableViewController.swift */,
+				0A4EA3A31DC9E5D9001787A3 /* InfoTableViewController.swift */,
+				0A4EA3A51DC9E9BB001787A3 /* CallMeViewController.swift */,
+				0A4EA3A71DC9EADC001787A3 /* CopyrightViewController.swift */,
 			);
 			name = "Info（关于）";
 			sourceTree = "<group>";
@@ -722,6 +730,7 @@
 			children = (
 				0A2A46461DC0AA3C00EC0887 /* CategoryTopViewController.swift */,
 				0A3C6DD81DC89367005CBDCA /* CategoryMidView.swift */,
+				0A4EA3A11DC9902F001787A3 /* CategoryBottomView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -984,10 +993,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AE807411DB0E36300459C08 /* InfoTableViewController.swift in Sources */,
 				0A23C6851DB8B0A3005E77DD /* HomeSearchModel.swift in Sources */,
 				0A23C6821DB8AF4D005E77DD /* SearchCell.swift in Sources */,
 				0AE8074F1DB4B63F00459C08 /* HomeModel.swift in Sources */,
+				0A4EA3A61DC9E9BB001787A3 /* CallMeViewController.swift in Sources */,
+				0A4EA3A41DC9E5D9001787A3 /* InfoTableViewController.swift in Sources */,
 				0AFA830A1DB7637000B37F9D /* KKAlertView.swift in Sources */,
 				0A1AE5851DBDA61C00E39E65 /* ProductCollectionViewCell.swift in Sources */,
 				0AE807481DB4A6CF00459C08 /* JingXuanViewController.swift in Sources */,
@@ -997,6 +1007,7 @@
 				0A23C67D1DB8AB16005E77DD /* BaseRequest.swift in Sources */,
 				0A3C6DD91DC89367005CBDCA /* CategoryMidView.swift in Sources */,
 				0A2A46471DC0AA3C00EC0887 /* CategoryTopViewController.swift in Sources */,
+				0A4EA3A21DC9902F001787A3 /* CategoryBottomView.swift in Sources */,
 				0A1396141DB0CB030077CAA9 /* ZKKTabBarController.swift in Sources */,
 				0AE8075F1DB6131C00459C08 /* KKBaseRequest.swift in Sources */,
 				0A1396121DB0CA640077CAA9 /* ViewController.swift in Sources */,
@@ -1004,6 +1015,7 @@
 				0A13961E1DB0CF2E0077CAA9 /* CategoryViewController.swift in Sources */,
 				0A2A464F1DC0AF9A00EC0887 /* CategoryTopCollectionViewCell.swift in Sources */,
 				0A03A6851DC7445A00A2E1DA /* CategoryTopViewModel.swift in Sources */,
+				0A4EA3A81DC9EADC001787A3 /* CopyrightViewController.swift in Sources */,
 				0A23C6791DB8AA98005E77DD /* GeneralViewController.swift in Sources */,
 				0A23C67F1DB8ADC8005E77DD /* SearchViewController.swift in Sources */,
 				0A23C6781DB8AA98005E77DD /* DigitalViewController.swift in Sources */,
