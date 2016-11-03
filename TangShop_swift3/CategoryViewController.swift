@@ -59,8 +59,7 @@ class CategoryViewController: UIViewController,UIScrollViewDelegate,CategoryButt
 		midView.delegate = self
 		scrollView.addSubview(midView)
 		
-		let  bottomView = CategoryBottomView()
-		bottomView.frame =  CGRect(x: 0, y: (midView.mj_y + midView.midVieHieght() + 16), width:SCREEN_W, height: SCREEN_H)
+		let  bottomView = CategoryBottomView(frame：CGRect(x: 0, y: (midView.mj_y + midView.midVieHieght() + 16), width:SCREEN_W, height: SCREEN_H))
 		bottomView.delegate = self
 		
 		scrollView.contentSize = CGSize(width: SCREEN_W, height:SCREEN_H + 64)

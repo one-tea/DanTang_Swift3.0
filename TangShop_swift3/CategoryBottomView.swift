@@ -22,8 +22,6 @@ class CategoryBottomView: UIView {
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		loadData()
-
-		
 		
 	}
 	
