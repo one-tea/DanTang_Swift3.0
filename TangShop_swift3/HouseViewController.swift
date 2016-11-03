@@ -26,8 +26,8 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.view.addSubview(tableView);
         self.loadData();
-        self.view.addSubview(tableView);
     }
     
     func loadData() -> Void {
@@ -48,9 +48,10 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 model.coverImageUrl = item["cover_image_url"].string;
                 model.title = item["title"].string;
                 self.dataArr.append(model);
-                DispatchQueue.main.async {
-                self.tableView.reloadData();
-                }
+                DispatchQueue.main.async(execute: { 
+					self.tableView.reloadData()
+
+				})
             }
         }
     }
