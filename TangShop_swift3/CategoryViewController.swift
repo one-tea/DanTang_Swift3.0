@@ -59,7 +59,7 @@ class CategoryViewController: UIViewController,UIScrollViewDelegate,CategoryButt
 		midView.delegate = self
 		scrollView.addSubview(midView)
 		
-		let  bottomView = CategoryBottomView(frame：CGRect(x: 0, y: (midView.mj_y + midView.midVieHieght() + 16), width:SCREEN_W, height: SCREEN_H))
+		let  bottomView = CategoryBottomView(frame: CGRect(x: 0, y: (midView.mj_y + midView.midVieHieght() + 16), width:SCREEN_W, height: SCREEN_H))
 		bottomView.delegate = self
 		
 		scrollView.contentSize = CGSize(width: SCREEN_W, height:SCREEN_H + 64)
@@ -72,7 +72,7 @@ class CategoryViewController: UIViewController,UIScrollViewDelegate,CategoryButt
 	// detegate
 	
 	internal func push(_ button: UIButton) {
-		let categoryBtnDetailVC = CategoryDetailViewController()
+		let categoryBtnDetailVC = CategoryMidDetailViewController()
 		categoryBtnDetailVC.id = button.tag
 		categoryBtnDetailVC.navigationItem.title = button.titleLabel?.text
 		categoryBtnDetailVC.hidesBottomBarWhenPushed = true
@@ -80,7 +80,7 @@ class CategoryViewController: UIViewController,UIScrollViewDelegate,CategoryButt
 	}
 	
 	internal func pushM(_ button: UIButton) {
-		let categoryBtnDetailVC = CategoryDetailViewController()
+		let categoryBtnDetailVC = CategoryMidDetailViewController()
 		categoryBtnDetailVC.id = button.tag
 		categoryBtnDetailVC.navigationItem.title = button.titleLabel?.text
 		categoryBtnDetailVC.hidesBottomBarWhenPushed = true
