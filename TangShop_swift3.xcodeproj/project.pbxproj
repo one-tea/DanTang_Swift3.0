@@ -838,7 +838,7 @@
 				TargetAttributes = {
 					0A1395931DB0B5CB0077CAA9 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = CA5N4T4B5Z;
+						DevelopmentTeam = 7N4BQX3A87;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
@@ -1162,7 +1162,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = CA5N4T4B5Z;
+				DEVELOPMENT_TEAM = 7N4BQX3A87;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TangShop_swift3/UM/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
@@ -1212,7 +1212,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.TangShop-swift3";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TangShop.wift3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/kevin/Desktop/DanTang_Swift3.0/TangShop_swift3/Header.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1227,7 +1227,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = CA5N4T4B5Z;
+				DEVELOPMENT_TEAM = 7N4BQX3A87;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TangShop_swift3/UM/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
@@ -1277,7 +1277,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.TangShop-swift3";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TangShop.wift3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/kevin/Desktop/DanTang_Swift3.0/TangShop_swift3/Header.h;
 				SWIFT_VERSION = 3.0;

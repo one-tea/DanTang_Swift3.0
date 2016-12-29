@@ -2,8 +2,8 @@
 //  Header.h
 //  TangShop
 //
-//  Created by JGCM on 16/9/23.
-//  Copyright © 2016年 蒋轩哲. All rights reserved.
+//  Created by Kevin on 16/9/23.
+//  Copyright © 2016年 zhangkk. All rights reserved.
 //
 
 #ifndef Header_h

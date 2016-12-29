@@ -13,7 +13,9 @@ import MJRefresh
 import SwiftyJSON
 import AFNetworking
 
-class JingXuanViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SDCycleScrollViewDelegate {
+
+
+class JingXuanViewController:UIViewController, UITableViewDataSource, UITableViewDelegate, SDCycleScrollViewDelegate {
     
     lazy var adView: SDCycleScrollView = {
         let adView = SDCycleScrollView.init(frame: CGRect(x: 10, y: 0, width: SCREEN_W - 20, height: 150), delegate: self, placeholderImage: nil);
@@ -47,20 +49,19 @@ class JingXuanViewController: UIViewController, UITableViewDataSource, UITableVi
     lazy var manager:AFHTTPSessionManager = {
         let manager = AFHTTPSessionManager()
         manager.responseSerializer = AFHTTPResponseSerializer()
+		
         return manager
     }()
     
     var dataArr = [HomeModel]();
     var ofSet = 0;
-    var urlArr = [String]();
-    
-    
-   
-    
-
+	var urlArr = [String]()
+		
+//	var web  = u
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+		
         self.tableView.mj_header = MJRefreshNormalHeader.init( refreshingBlock:{
             
             self.ofSet = 0;
@@ -77,11 +78,12 @@ class JingXuanViewController: UIViewController, UITableViewDataSource, UITableVi
 
         // Do any additional setup after loading the view.
     }
-    
+	
+
     func loadHeaderData() -> Void {
         let url = "http://api.dantangapp.com/v1/banners?channel=iOS"
        
-        
+	
        manager.get(url, parameters: nil, progress: nil, success: { (task, resp) in
             
             let obj = JSON.init(data: resp as! Data, options: JSONSerialization.ReadingOptions.mutableContainers)
@@ -123,7 +125,7 @@ class JingXuanViewController: UIViewController, UITableViewDataSource, UITableVi
         
         
     }
-    
+	
     
     //tableView
   
@@ -163,7 +165,13 @@ class JingXuanViewController: UIViewController, UITableViewDataSource, UITableVi
         self.navigationController?.pushViewController(jxDetailVC, animated: true)
         
     }
-    
+	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		cell.layer.transform = CATransform3DMakeScale(0.8, 0.8, 1)
+		UIView.animate(withDuration: 0.8, animations: {
+			cell.layer.transform = CATransform3DMakeScale(1, 1, 1)
+		}, completion: nil)
+		
+	}
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

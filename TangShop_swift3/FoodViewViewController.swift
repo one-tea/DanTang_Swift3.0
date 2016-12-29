@@ -88,6 +88,13 @@ class FoodViewViewController: UIViewController,UITableViewDelegate, UITableViewD
             return cell
         
     }
+	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		cell.layer.transform = CATransform3DMakeScale(0.8, 0.8, 1)
+		UIView.animate(withDuration: 0.8, animations: {
+			cell.layer.transform = CATransform3DMakeScale(1, 1, 1)
+		}, completion: nil)
+		
+	}
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

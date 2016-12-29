@@ -19,8 +19,10 @@ class KKAlertView: NSObject {
         
         let W  = UIScreen.main.bounds.size.width
         let H  = UIScreen.main.bounds.size.height
-        
-        
+		
+		
+		
+		
         warningText = UILabel.init(frame: CGRect(x: 0, y: 0, width: W/2, height: 30))
         warningText.center =  CGPoint(x: W/2, y: H/2-50)
         warningText.text = title
@@ -30,7 +32,8 @@ class KKAlertView: NSObject {
         warningText.layer.cornerRadius = 7.0
         warningText.clipsToBounds = true
         view.addSubview(warningText)
-        
+		
+	
         
         func shakeToUpShow(_ aView: UIView){
             

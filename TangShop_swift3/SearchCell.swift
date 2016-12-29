@@ -1,9 +1,9 @@
 //
 //  SearchCell.swift
-//  Tang
+//  TangShop_swift3
 //
-//  Created by JGCM on 16/9/15.
-//  Copyright © 2016年 xuanZheJiang. All rights reserved.
+//  Created by Kevin on 16/10/14.
+//  Copyright © 2016年 zhangkk. All rights reserved.
 //
 
 import UIKit

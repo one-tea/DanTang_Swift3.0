@@ -123,7 +123,7 @@ class HomePageViewController: UIViewController ,UIScrollViewDelegate{
         let GVC = GeneralViewController()
         GVC.view.frame = CGRect(x: SCREEN_W*5, y: 0, width: SCREEN_W, height: SCREEN_H)
         
-        let controllers = [JXVC, FVC, DVC, NVC, GVC]
+        let controllers = [JXVC, FVC, HVC, DVC, NVC, GVC]
         for vc  in controllers {
             self.addChildViewController(vc)
         }

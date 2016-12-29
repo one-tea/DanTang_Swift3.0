@@ -1,9 +1,9 @@
 //
 //  InfoTableViewController.swift
-//  Tang
+//  TangShop_swift3
 //
-//  Created by JGCM on 16/8/25.
-//  Copyright © 2016年 xuanZheJiang. All rights reserved.
+//  Created by Kevin on 16/11/14.
+//  Copyright © 2016年 zhangkk. All rights reserved.
 //
 
 import UIKit
@@ -25,9 +25,9 @@ class InfoTableViewController: UITableViewController, MFMailComposeViewControlle
         // 首先要判断设备具不具备发送邮件功能
         if MFMailComposeViewController.canSendMail() {
             let controller = MFMailComposeViewController()
-            controller.setSubject("糖购JGCM问题反馈")
+            controller.setSubject("单糖问题反馈")
             controller.mailComposeDelegate = self
-            controller.setToRecipients(["jgcm@live.cn"])
+            controller.setToRecipients(["zhangkkwy@163.com"])
             controller.setMessageBody("\(versionL.text!)", isHTML: false)
             self.present(controller, animated: true, completion: nil)
         } else {
@@ -47,7 +47,7 @@ class InfoTableViewController: UITableViewController, MFMailComposeViewControlle
     func callMe() -> Void {
         
         if #available(iOS 9.0, *) {
-            let url = URL(string: "https://xuanzhejiang.github.io");
+            let url = URL(string: "http://www.jianshu.com/users/fd4f9c1d72e2/latest_articles");
             let safari = SFSafariViewController.init(url: url!, entersReaderIfAvailable: true);
             self.present(safari, animated: true, completion: nil);
         } else {
@@ -68,7 +68,8 @@ class InfoTableViewController: UITableViewController, MFMailComposeViewControlle
     }
     
     func evaluateAction() -> Void {
-            let url = "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=1145725777"
+//            let url = "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=1145725777"
+				let url = "https://github.com/one-tea/DanTang_Swift3.0"
             UIApplication.shared.openURL(URL.init(string: url)!)
         
     }
@@ -143,7 +144,6 @@ class InfoTableViewController: UITableViewController, MFMailComposeViewControlle
         
         // 取出文件夹下所有文件数组
         let fileArr = FileManager.default.subpaths(atPath: cachePath!)
-        
         //快速枚举出所有文件名 计算文件大小
         var size = 0
         for file in fileArr! {
@@ -173,13 +173,15 @@ class InfoTableViewController: UITableViewController, MFMailComposeViewControlle
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 242 / 255, green: 80 / 255, blue: 85 / 255, alpha: 1)
         navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "", style: .plain, target: nil, action: nil);
-        self.navigationItem.title = "关于";
+		self.navigationController?.navigationBar.titleTextAttributes = {[NSFontAttributeName:UIFont.systemFont(ofSize: 18),NSForegroundColorAttributeName: UIColor.white]}()
+		self.navigationItem.title = "关于";
 //        let imageView = UIImageView(image: UIImage(named: "header"));
 //        self.navigationItem.titleView = imageView;
         self.navigationController?.navigationBar.isTranslucent = false;
         self.tableView.tableFooterView = UIView.init(frame: CGRect.zero);
         self.tableView.bounces = false;
         self.tableView.backgroundColor = UIColor.init(red: 239/255, green: 239/255, blue: 239/255, alpha: 1);
+	
 
 		self.sizeL.text = String(self.fileSizeOfCache()) + "MB";
 

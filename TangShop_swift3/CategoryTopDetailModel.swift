@@ -1,9 +1,9 @@
 //
 //  CategoryTopDetailModel.swift
-//  Tang
+//  TangShop_swift3
 //
-//  Created by JGCM on 16/8/17.
-//  Copyright © 2016年 xuanZheJiang. All rights reserved.
+//  Created by Kevin on 16/11/01.
+//  Copyright © 2016年 zhangkk. All rights reserved.
 //
 
 import Foundation

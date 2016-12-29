@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  affine
+//  TangShop_swift3
 //
-//  Created by JGCM on 16/8/26.
-//  Copyright © 2016年 JGCM. All rights reserved.
+//  Created by Kevin on 16/10/14.
+//  Copyright © 2016年 zhangkk. All rights reserved.
 //
 
 import UIKit
@@ -19,8 +19,14 @@ class ViewController: UIViewController {
 
         timer1 = Timer.scheduledTimer(timeInterval: 1.91, target: self, selector: #selector(self.stop), userInfo: nil, repeats: false);
         timer2 = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.action), userInfo: nil, repeats: true);
+		
+		let  seg  = UISegmentedControl()
+		seg.addTarget(self, action: #selector(actions(_:)), for: UIControlEvents.valueChanged)
     }
-    
+	
+	func actions(_ actions:UISegmentedControl){
+		
+	}
     func stop() -> Void {
         timer2.invalidate();
         timer2 = nil;

@@ -1,8 +1,9 @@
 //
 //  BaseRequest.swift
+//  TangShop_swift3
 //
-//  Created by 蒋轩哲 on 16/7/25.
-//  Copyright © 2016年 蒋轩哲. All rights reserved.
+//  Created by Kevin on 16/10/14.
+//  Copyright © 2016年 zhangkk. All rights reserved.
 //
 
 import UIKit

@@ -1,9 +1,9 @@
 //
 //  GeneralViewController.swift
-//  Tang
+//  TangShop_swift3
 //
-//  Created by JGCM on 16/8/16.
-//  Copyright © 2016年 xuanZheJiang. All rights reserved.
+//  Created by Kevin on 16/10/14.
+//  Copyright © 2016年 zhangkk. All rights reserved.
 //  杂货页面
 
 import UIKit
@@ -85,6 +85,14 @@ class GeneralViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.navigationController?.pushViewController(JXDVC, animated: true);
         
     }
+	
+	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		cell.layer.transform = CATransform3DMakeScale(0.8, 0.8, 1)
+		UIView.animate(withDuration: 0.8, animations: {
+			cell.layer.transform = CATransform3DMakeScale(1, 1, 1)
+		}, completion: nil)
+		
+	}
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

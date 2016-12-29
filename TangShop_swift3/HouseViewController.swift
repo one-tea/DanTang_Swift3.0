@@ -1,9 +1,9 @@
 //
 //  JingXuanViewController.swift
-//  Tang
+//  TangShop_swift3
 //
-//  Created by JGCM on 16/8/15.
-//  Copyright © 2016年 xuanZheJiang. All rights reserved.
+//  Created by Kevin on 16/10/14.
+//  Copyright © 2016年 zhangkk. All rights reserved.
 //  家居页面
 
 import UIKit
@@ -22,45 +22,45 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return tableView;
     }()
     
-    var dataArr = [HomeModel]();
+    var dataArr = [HomeModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.loadData();
 		self.view.addSubview(tableView);
-        self.loadData();
     }
     
-    func loadData() -> Void {
-        let url = BASE_URL + "v1/channels/16/items";
-        let para = ["gender": "1",
-                    "generation": "1",
-                    "limit": "20",
-                    "offset": "0"];
-        BaseRequest.getWithURL(url, para: para as NSDictionary?) { (data, error) in
-            //            let str = NSString.init(data: data!, encoding: NSUTF8StringEncoding);
-            //            print(str!);
-            let obj = JSON.init(data: data!, options: JSONSerialization.ReadingOptions.mutableContainers);
-            print("house:\(obj)")
-            let modelArray = obj["data"]["items"].arrayValue;
-            for item in modelArray {
-                let model = HomeModel.init(fromJson: item);
-                model.likesCount = item["likes_count"].intValue;
-                model.coverImageUrl = item["cover_image_url"].string;
-                model.title = item["title"].string;
-                self.dataArr.append(model);
-                DispatchQueue.main.async(execute: { 
-					self.tableView.reloadData()
-
-				})
-            }
-        }
-    }
-    
+	
+	func loadData() -> Void {
+		let url = BASE_URL + "v1/channels/16/items";
+		let para = ["gender": "1",
+		            "generation": "1",
+		            "limit": "20",
+		            "offset": "0"];
+		BaseRequest.getWithURL(url, para: para as NSDictionary?) { (data, error) in
+			//                let str = NSString.init(data: data!, encoding: NSUTF8StringEncoding);
+			//                print(str!);
+			let obj = JSON.init(data: data!, options: JSONSerialization.ReadingOptions.mutableContainers);
+		
+			let modelArray = obj["data"]["items"].arrayValue;
+			for item in modelArray {
+				let model = HomeModel.init(fromJson: item);
+				model.likesCount = item["likes_count"].intValue;
+				model.coverImageUrl = item["cover_image_url"].string;
+				model.title = item["title"].string;
+				self.dataArr.append(model);
+				DispatchQueue.main.async {
+					self.tableView.reloadData();
+				}
+			}
+		}
+	}
+	
     ///TableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataArr.count;
     }
-    
+	
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeCell;
         let model = dataArr[(indexPath as NSIndexPath).row];
@@ -88,7 +88,13 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.navigationController?.pushViewController(JXDVC, animated: true);
         
     }
-    
+	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		cell.layer.transform = CATransform3DMakeScale(0.8, 0.8, 1)
+		UIView.animate(withDuration: 0.8, animations: {
+			cell.layer.transform = CATransform3DMakeScale(1, 1, 1)
+		}, completion: nil)
+		
+	}
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
