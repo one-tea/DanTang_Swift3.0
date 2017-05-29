@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         timer2 = nil;
     }
     //new 
+    //new add 
     func action() -> Void {
         UIView.animate(withDuration: 1, animations: { 
             
