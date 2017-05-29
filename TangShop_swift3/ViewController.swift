@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         timer2.invalidate();
         timer2 = nil;
     }
-    //new
+    
     func action() -> Void {
         UIView.animate(withDuration: 1, animations: { 
             
