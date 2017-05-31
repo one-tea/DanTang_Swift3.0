@@ -1,6 +1,7 @@
 platform :ios ,'8.0'
 
-use_frameworks!
+use_frameworks!one
+
 
 target 'TangShop_swift3' do
 
