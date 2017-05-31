@@ -11,6 +11,6 @@ target 'TangShop_swift3' do
 	pod 'MJRefresh'	
 	pod 'SDWebImage', '~>3.8'
 	
-	pod 'JPush'
+	pod 'JPush’,
     pod 'SwiftyJSON', :git => 'https://github.com/IBM-Swift/SwiftyJSON.git'
 end
